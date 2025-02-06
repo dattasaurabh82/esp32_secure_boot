@@ -29,7 +29,7 @@ When enabled:
 - Provides hardware-level security
 - Essential for IoT devices requiring secure deployments
 
-> 💡 No Github Actions Flow at the Moment. Need local system instakllation. For that Follow Process: [2.1. Install using arduino-cli](https://github.com/dattasaurabh82/help-button-firmware/tree/main?tab=readme-ov-file#22-install-esp32-boards)
+> 💡 Need local system installation. For that Follow Process: [Install using arduino-cli](https://github.com/dattasaurabh82/help-button-firmware/tree/main?tab=readme-ov-file#22-install-esp32-boards)
 
 ## 1. Initial Secure Boot Setup (One Time Only)
 
