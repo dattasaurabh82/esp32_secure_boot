@@ -4,6 +4,8 @@
 
 `ESP32-H2`
 
+> But the shell script and commands can be adopted for any ESP32 chipset that supports secure boot
+
 Secure boot ensures that our ESP32-H2 only runs firmware that we have authorized. 
 
 ## Advantages
