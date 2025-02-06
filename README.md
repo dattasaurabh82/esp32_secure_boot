@@ -90,6 +90,8 @@ espsecure.py sign_data --version 2 --keyfile secure_boot_signing_key.pem --outpu
 > Can't use `arduino-cli`
 
 ```bash
+# For esp32-h2, as an example 
+
 esptool.py --chip esp32h2 --port <PORT> --baud 921600 \
 --before default_reset --after hard_reset write_flash -e -z --flash_mode keep \
 --flash_freq keep --flash_size 4MB --force \
@@ -106,7 +108,7 @@ esptool.py --chip esp32h2 --port <PORT> --baud 921600 \
 > Using `--force` is okay in this case because we're uploading signed binaries.
 
 
-4.2. From web tool: [dattasaurabh82.github.io/webespflasher/](ttps://dattasaurabh82.github.io/webespflasher/)
+4.2. From web tool: [dattasaurabh82.github.io/webespflasher/](https://dattasaurabh82.github.io/webespflasher/)
 
 ## But that's a lot of manual steps
 
@@ -115,6 +117,9 @@ Yes and so, the manual steps 2 and 4 can be made faster with a helper script cal
 Just do:
 
 ```bash
+# For esp32-h2, as an example
+# Adopt the script and the cmd settings for your chip set 
+
 ./secure_boot_process.sh --port <PORT>
 
 # compiles, signs and uploads signed binaries
