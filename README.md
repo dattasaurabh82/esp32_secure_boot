@@ -29,7 +29,7 @@ When enabled:
 - Provides hardware-level security
 - Essential for IoT devices requiring secure deployments
 
-> 💡 Need local system installation. For that Follow Process: [Install using arduino-cli](https://github.com/dattasaurabh82/help-button-firmware/tree/main?tab=readme-ov-file#22-install-esp32-boards)
+> 💡 Need local system installation.
 
 ## 1. Initial Secure Boot Setup (One Time Only)
 
@@ -85,6 +85,10 @@ espsecure.py sign_data --version 2 --keyfile secure_boot_signing_key.pem --outpu
 
 ## 4. Uploading (Every Update)
 
+4.1. From Terminal 
+
+> Can't use `arduino-cli`
+
 ```bash
 esptool.py --chip esp32h2 --port <PORT> --baud 921600 \
 --before default_reset --after hard_reset write_flash -e -z --flash_mode keep \
@@ -100,6 +104,9 @@ esptool.py --chip esp32h2 --port <PORT> --baud 921600 \
 > This is expected and good - it shows the secure boot protection is working!
 >
 > Using `--force` is okay in this case because we're uploading signed binaries.
+
+
+4.2. From web tool: [dattasaurabh82.github.io/webespflasher/](ttps://dattasaurabh82.github.io/webespflasher/)
 
 ## But that's a lot of manual steps
 
