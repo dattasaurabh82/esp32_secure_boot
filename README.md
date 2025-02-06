@@ -1,6 +1,17 @@
-# ESP32-H2 Secure Boot Guide
+# ESP32 Secure Boot Guide
+
+## Focus hardware chipset
+
+`ESP32-H2`
 
 Secure boot ensures that our ESP32-H2 only runs firmware that we have authorized. 
+
+## Advantages
+
+- The RSA-PSS's public key is stored on the device. The corresponding RSA-PSS private key is kept at a secret place and is never accessed by the device.
+- Only one public key can be generated and stored in the chip during manufacturing.
+- The same image format and signature verification method is applied for applications and the second stage bootloader.
+- No secrets are stored on the device. Therefore, it is immune to passive side-channel attacks, e.g., timing or power analysis.
 
 When enabled:
 
